@@ -1,20 +1,14 @@
+# 关闭例行「版本更新」PR（limit: 0），仅保留安全漏洞更新（不受此限制影响）。
+# 想恢复每周依赖升级 PR：删掉两处 open-pull-requests-limit 即可。
 version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-    groups:
-      production-dependencies:
-        applies-to: "version-updates"
-        patterns:
-          - "*"
+    open-pull-requests-limit: 0
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    groups:
-      ci-dependencies:
-        applies-to: "version-updates"
-        patterns:
-          - "*"
+    open-pull-requests-limit: 0
