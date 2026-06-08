@@ -28,7 +28,7 @@ tags: [调试]
 
 | 案例 | 类别 | 现象一句话 | 根因 | 日期 |
 |---|---|---|---|---|
-| *（待第一条调试落盘）* | | | | |
+| [[调试案例库/MJCF裁三指-同名body与悬空exclude\|裁三指 MJCF：同名 body + 悬空 exclude]] | 仿真 · MuJoCo | 删指后模型 `unknown body` 加载失败；中指/无名指 body 同名 | CAD 导出 body 名按部件命名会重名；删 body 没清 `contact/exclude` 悬空引用 | 2026-06-08 |
 
 ---
 
