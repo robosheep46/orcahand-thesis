@@ -45,6 +45,7 @@ description: 把 ETH ORCA 开源手裁剪成三指，硬件线 + 仿真线双轨
 | [[调试案例库/index\|🐞 调试案例库]] | 装机/接线/标定/环境/训练的**实战踩坑**，按 现象→根因→修复 沉淀（调试时 AI 协助落盘） |
 | [[面试知识库/index\|🎓 面试知识库]] | 嵌入式 / 算法 / 项目决策的**体系化深度知识**，答辩与面试的弹药库 |
 | [[执行计划]] | 课题定案、里程碑、采购、论文骨架、风险（master 文档） |
+| [[环境配置]] | 谁跑在哪：Windows 原生 vs 云 Linux；MuJoCo/CadQuery/orca_core/AutoDL 安装步骤 |
 
 ## ORCA 开源资产（[github.com/orcahand](https://github.com/orcahand)，MIT）
 
