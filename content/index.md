@@ -58,5 +58,6 @@ description: 把 ETH ORCA 开源手裁剪成三指，硬件线 + 仿真线双轨
 | [orca_teleop](https://github.com/orcahand/orca_teleop) | 遥操作输入（换 MediaPipe，不买手套） | `repos/orca_teleop` |
 
 > [!note] 状态（2026-06-09）
-> **食指验证电气套件已购**（STS3215×4 + FE-URT-2 + 7.4V 电源 + 轴承/腱绳/PTFE 管）。**三指 MJCF 已裁定并动力学验证通过**。**仿真环境就绪**（orca_sim：MuJoCo+Gymnasium 本地原生，非 Isaac）。**RL 管线已验证**（SB3 PPO），**三指 cube 操作任务已建成**（obs37/act10，三指能抓握方块）。**CadQuery 基座+绞盘第一版出件**。源文件夹改英文名 `dexterous-hand`。
-> 下一步：舵机到货跑 orca_core 单指验证；仿真上 AutoDL 云正式训三指基线（答「三指能否手内操作」）。
+> **食指验证电气套件已购**（STS3215×4 + FE-URT-2 + 7.4V 电源 + 轴承/腱绳/PTFE 管）。**三指 MJCF 已裁定并动力学验证通过**。**仿真环境就绪**（orca_sim：MuJoCo+Gymnasium 本地原生，非 Isaac）。**RL 管线已验证**（SB3 PPO），**三指 cube 操作任务已建成**（obs37/act10）。**CadQuery 基座+绞盘第一版出件**。源文件夹改英文名 `dexterous-hand`。
+> **三件并进（ABC）**：① **力矩动作空间变体已建**（`scene_3f_right_torque.xml`，对照位置版，落实贡献点 2）；② **三指 cube 过夜训练在跑**（8 并行环境，本机 CPU；早期 success_rate 0→18% 且 reward 稳涨，初步说明三指能学会手内转方块）；③ **遥操作起步打通**（MediaPipe HandLandmarker + 内置摄像头，实时 21 关键点骨架）。
+> 下一步：看过夜训练终值；舵机到货跑 orca_core 单指验证；MediaPipe → retargeter 接上控制；仿真上 AutoDL 云正式训三指基线。

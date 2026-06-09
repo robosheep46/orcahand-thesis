@@ -31,6 +31,7 @@ tags: [调试]
 | [[调试案例库/MJCF裁三指-同名body与悬空exclude\|裁三指 MJCF：同名 body + 悬空 exclude]] | 仿真 · MuJoCo | 删指后模型 `unknown body` 加载失败；中指/无名指 body 同名 | CAD 导出 body 名按部件命名会重名；删 body 没清 `contact/exclude` 悬空引用 | 2026-06-08 |
 | [[调试案例库/MuJoCo中文路径打不开模型\|MuJoCo 打不开中文路径]] | 仿真 · MuJoCo | orca_sim 报 `ParseXML: Error opening file`，文件却存在 | 工程在「毕业设计」中文目录，MuJoCo 的 C 文件 I/O 不支持非 ASCII 绝对路径 → 搬到纯英文路径 | 2026-06-09 |
 | [[调试案例库/mj_name2id静默返回-1导致只有一个关节动\|驱动只有一个关节动]] | 仿真 · MuJoCo | 驱动 10 关节抓握，只有一个动 | 执行器名带 `_actuator` 后缀，传关节名 `mj_name2id` 静默返回 -1，`target[-1]` 被反复覆盖 → id 后 assert≥0 | 2026-06-09 |
+| [[调试案例库/mediapipe新版删了solutions改Tasks-API\|MediaPipe 没有 mp.solutions]] | 仿真 · MediaPipe | `mp.solutions.hands` 报 `module has no attribute 'solutions'` | 新版(0.10.35)移除 legacy solutions API，改 Tasks API：`HandLandmarker` + 外挂 `.task` 模型，骨架要自己画 | 2026-06-09 |
 
 ---
 
