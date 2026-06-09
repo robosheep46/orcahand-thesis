@@ -20,7 +20,7 @@
 | 路径 | 内容 |
 |---|---|
 | `index.md` | 项目总览首页（定位、贡献点、里程碑、双库入口、ORCA 仓链接） |
-| `执行计划.md` | 完整执行计划 master 文档（源自 `C:\Users\12415\Desktop\毕业设计\计划.md`） |
+| `执行计划.md` | 完整执行计划 master 文档（源自 `C:\Users\12415\Desktop\dexterous-hand\计划.md`） |
 | `调试案例库/index.md` | 🐞 实战踩坑库：装机/接线/标定/环境/训练，按 现象→根因→修复 沉淀 |
 | `调试案例库/_模板.md` | 案例模板（复制它写新案例） |
 | `面试知识库/index.md` | 🎓 知识地图 + 高频问答清单 + 学习路线 |
@@ -43,7 +43,8 @@ git add -A && git commit -m "..." && git push   # 几十秒后网站自动更新
 
 ## 相关位置
 
-- **毕设源文件夹**：`C:\Users\12415\Desktop\毕业设计`（`repos/` 是 ORCA 五个克隆代码仓、`CAD/` 是官方 STL 的 zip、`计划.md` 是计划原件）
+- **毕设源文件夹**：`C:\Users\12415\Desktop\dexterous-hand`（原「毕业设计」，改英文名避开 MuJoCo 中文路径坑）。`repos/` 是 ORCA 五个克隆代码仓（含 orca_sim、三指 MJCF）、`CAD/` 是官方 STL 的 zip、`计划.md` 是计划原件、`cad_3f/` 是 CadQuery 工程、`sim_env/` 是仿真 venv
+- **务必纯英文路径**：要喂给 MuJoCo / OCP 等原生 C 库的工程不能放中文目录（见 content 里「环境配置」与调试案例）
 - ORCA 开源全家桶：https://github.com/orcahand （MIT）
 
 ## 下一步
