@@ -33,6 +33,7 @@ tags: [调试]
 | [[调试案例库/mj_name2id静默返回-1导致只有一个关节动\|驱动只有一个关节动]] | 仿真 · MuJoCo | 驱动 10 关节抓握，只有一个动 | 执行器名带 `_actuator` 后缀，传关节名 `mj_name2id` 静默返回 -1，`target[-1]` 被反复覆盖 → id 后 assert≥0 | 2026-06-09 |
 | [[调试案例库/mediapipe新版删了solutions改Tasks-API\|MediaPipe 没有 mp.solutions]] | 仿真 · MediaPipe | `mp.solutions.hands` 报 `module has no attribute 'solutions'` | 新版(0.10.35)移除 legacy solutions API，改 Tasks API：`HandLandmarker` + 外挂 `.task` 模型，骨架要自己画 | 2026-06-09 |
 | [[调试案例库/三指cube训练reward-hacking死撑farming\|训练 reward hacking：死撑 farming]] | 仿真 · RL | reward 涨 10×，success 却从 31%→2% | 稠密奖励有白给基线 + 无终局成功奖励 + 完成即终止 → "完成"反而少拿分，策略学会死撑到时间上限。改势能整形 + 终局大奖 + 时间惩罚 | 2026-06-09 |
+| [[调试案例库/立手抓握IL-维持任务退化-零动作也托住\|立手抓握 IL：6/6 是假象]] | 仿真 · IL | BC 抓握 eval 6/6 很漂亮，但零动作也 6/6 | 任务被框成"维持已建立的抓握"，grip-first 绕过了重力下成型；方块被笼死，任何静止姿态都托得住 → held 对策略不敏感。改：用 do-nothing/open-hand 双基线夹评估 | 2026-06-09 |
 
 ---
 
