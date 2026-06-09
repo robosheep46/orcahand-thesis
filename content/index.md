@@ -57,5 +57,6 @@ description: 把 ETH ORCA 开源手裁剪成三指，硬件线 + 仿真线双轨
 | [orca_retargeter](https://github.com/orcahand/orca_retargeter) | 人手 → 机械手重定向 | `repos/orca_retargeter` |
 | [orca_teleop](https://github.com/orcahand/orca_teleop) | 遥操作输入（换 MediaPipe，不买手套） | `repos/orca_teleop` |
 
-> [!note] 状态
-> 选型定案（执行器最终定 **STS3215 ×11**），待采购。本周：注册 orcahand.com 下 CAD/BOM、确认电压版本下单、WSL2 环境、MuJoCo 跑五指 MJCF、AutoDL hello-world。
+> [!note] 状态（2026-06-09）
+> **食指验证电气套件已购**（STS3215×4 + FE-URT-2 + 7.4V 电源 + 轴承/腱绳/PTFE 管）。**三指 MJCF 已裁定并动力学验证通过**（10 关节精准跟踪、抓握 rollout 正常）。**仿真环境就绪**（orca_sim：MuJoCo+Gymnasium 本地原生，非 Isaac）。**CadQuery 基座+绞盘第一版出件**（待舵机到货量孔距收口）。源文件夹改英文名 `dexterous-hand`。
+> 下一步：舵机到货跑 orca_core 单指验证；仿真接 RL 库训三指基线。
