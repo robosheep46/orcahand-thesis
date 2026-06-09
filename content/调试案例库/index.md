@@ -32,6 +32,7 @@ tags: [调试]
 | [[调试案例库/MuJoCo中文路径打不开模型\|MuJoCo 打不开中文路径]] | 仿真 · MuJoCo | orca_sim 报 `ParseXML: Error opening file`，文件却存在 | 工程在「毕业设计」中文目录，MuJoCo 的 C 文件 I/O 不支持非 ASCII 绝对路径 → 搬到纯英文路径 | 2026-06-09 |
 | [[调试案例库/mj_name2id静默返回-1导致只有一个关节动\|驱动只有一个关节动]] | 仿真 · MuJoCo | 驱动 10 关节抓握，只有一个动 | 执行器名带 `_actuator` 后缀，传关节名 `mj_name2id` 静默返回 -1，`target[-1]` 被反复覆盖 → id 后 assert≥0 | 2026-06-09 |
 | [[调试案例库/mediapipe新版删了solutions改Tasks-API\|MediaPipe 没有 mp.solutions]] | 仿真 · MediaPipe | `mp.solutions.hands` 报 `module has no attribute 'solutions'` | 新版(0.10.35)移除 legacy solutions API，改 Tasks API：`HandLandmarker` + 外挂 `.task` 模型，骨架要自己画 | 2026-06-09 |
+| [[调试案例库/三指cube训练reward-hacking死撑farming\|训练 reward hacking：死撑 farming]] | 仿真 · RL | reward 涨 10×，success 却从 31%→2% | 稠密奖励有白给基线 + 无终局成功奖励 + 完成即终止 → "完成"反而少拿分，策略学会死撑到时间上限。改势能整形 + 终局大奖 + 时间惩罚 | 2026-06-09 |
 
 ---
 
